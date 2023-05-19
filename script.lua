@@ -387,13 +387,13 @@ local OnMessageEvent =
                             player .. " has requested I dance",
                             "All"
                         )
-                    elseif message == "botcontrols" or message == '"controls"' then
+                    elseif message == "botcontrols" or message == '"controls"' or message = "controls" then
                         if NotShowingControls then
                             NotShowingControls = false
 
                             for i = 6, 0, -1 do
                                 UpdateBooth(
-                                    "[Page 1]\n1. forward\n2. backwards\n3. left\n4. right\n5. jump\n" ..
+                                    "[Page 1]\n1. forward\n2. backwards\n3. left\n4. right\n5. jump\n6. damage\n" ..
                                         tostring(i) .. ".."
                                 )
 
@@ -401,7 +401,7 @@ local OnMessageEvent =
                             end
                             for i = 6, 0, -1 do
                                 UpdateBooth(
-                                    "[Page 2]\n6. die\n7. checkpoints\n8. gamble\n9. work\n" ..
+                                    "[Page 2]\n7. checkpoints\n8. gamble\n9. work\n10. sitn" ..
                                         tostring(i) .. ".."
                                 )
 
@@ -409,7 +409,7 @@ local OnMessageEvent =
                             end
                             for i = 4, 0, -1 do
                                 UpdateBooth(
-                                    "[Page 3]\n11. sit\n12. (+ or -)gravity" ..
+                                    "[Page 3]\n11. (+ or - or nothing)gravity" ..
                                         tostring(i) .. ".."
                                 )
 
